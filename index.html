@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Jennifer Pien MD — Psychiatrist · Literary Advocate · Stanford</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{forest:'#2C4A2E',gold:'#C4943A',parchment:'#F2EDE4',ink:'#1C1C1C',mist:'#8FA89C'},fontFamily:{sans:['"Plus Jakarta Sans"','sans-serif'],display:['"Outfit"','sans-serif'],drama:['"Cormorant Garamond"','serif'],mono:['"IBM Plex Mono"','monospace']}}}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Outfit:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E")}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:#F2EDE4;color:#1C1C1C;font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;margin:0}
+.btn-m{position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.25,.46,.45,.94),box-shadow .3s ease;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none}
+.btn-m:hover{transform:scale(1.03)}
+.btn-m .fill{position:absolute;inset:0;background:rgba(255,255,255,.12);transform:translateX(-101%);transition:transform .35s cubic-bezier(.25,.46,.45,.94)}
+.btn-m:hover .fill{transform:translateX(0)}
+#nav{transition:background .4s,border-color .4s}
+#nav.s{background:rgba(242,237,228,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-color:rgba(44,74,46,.18)!important}
+#nav.s .nlogo,#nav.s .nlink{color:#2C4A2E!important}
+.card-hover{transition:transform .35s cubic-bezier(.25,.46,.45,.94),box-shadow .35s ease;border-radius:1.75rem}
+.card-hover:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(44,74,46,.13)}
+.gsap-fade{opacity:0;transform:translateY(32px)}
+@media(max-width:768px){.hero-h2{font-size:clamp(3.5rem,15vw,7rem)!important}}
+details summary::-webkit-details-marker{display:none}
+details[open] summary .plus{transform:rotate(45deg)}
+.plus{transition:transform .3s ease;display:inline-block}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 border border-transparent rounded-full px-5 py-2.5 flex items-center gap-6 w-[94%] max-w-4xl">
+  <a href="#" class="nlogo font-display font-bold text-xs tracking-[0.22em] uppercase text-parchment mr-auto whitespace-nowrap transition-colors duration-300">JENNIFER PIEN MD</a>
+  <div class="hidden md:flex items-center gap-5">
+    <a href="#about" class="nlink text-parchment/75 text-sm font-medium hover:-translate-y-px transition-all duration-200">About</a>
+    <a href="#work" class="nlink text-parchment/75 text-sm font-medium hover:-translate-y-px transition-all duration-200">Work</a>
+    <a href="#writing" class="nlink text-parchment/75 text-sm font-medium hover:-translate-y-px transition-all duration-200">Writing</a>
+    <a href="#contact" class="nlink text-parchment/75 text-sm font-medium hover:-translate-y-px transition-all duration-200">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="relative flex items-end overflow-hidden" style="height:100dvh;min-height:680px">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=1920&q=80" alt="Forest Canopy" class="w-full h-full object-cover object-center" loading="eager">
+    <div class="absolute inset-0" style="background:linear-gradient(to top,#1C1C1C 0%,rgba(28,28,28,.62) 40%,rgba(44,74,46,.18) 100%)"></div>
+  </div>
+  <div class="relative z-10 pb-16 md:pb-24 pl-8 md:pl-16 lg:pl-24 max-w-5xl">
+    <p id="h-tag" class="font-mono text-gold text-xs tracking-[0.28em] uppercase mb-5 opacity-0">Psychiatrist · Stanford University</p>
+    <h1 id="h-l1" class="font-display font-bold text-parchment text-4xl md:text-5xl tracking-tight leading-none mb-1 opacity-0">Physician</h1>
+    <h1 id="h-l2" class="hero-h2 font-drama italic text-parchment opacity-0" style="font-size:clamp(5rem,12vw,10rem);line-height:0.88">Author</h1>
+    <p id="h-sub" class="font-sans text-parchment/60 text-base md:text-lg max-w-lg mt-7 mb-8 leading-relaxed opacity-0">Medical humanities, narrative medicine, and literary fiction.</p>
+    <div id="h-cta" class="flex flex-wrap gap-3 opacity-0">
+      <a href="#about" class="btn-m border border-parchment/35 text-parchment font-medium px-7 py-3.5 rounded-full text-sm"><span class="fill" style="background:rgba(255,255,255,.05)"></span><span class="relative z-10">Learn More ↓</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6 md:px-12 lg:px-20 bg-parchment">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- Left: Bio -->
+      <div>
+        <p class="font-mono text-gold text-xs tracking-[0.25em] uppercase mb-5 gsap-fade">The Physician</p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-ink mb-8 gsap-fade">Jennifer Pien<br><span class="text-forest">MD</span></h2>
+        <div class="space-y-5 text-ink/70 text-base leading-relaxed gsap-fade">
+          <p>I am a board-certified psychiatrist and Clinical Associate Professor in the Department of Psychiatry and Behavioral Sciences at Stanford University. My clinical work centers on physician well-being through Stanford's WellConnect program, and I am on the Advisory Board for Bellevue Literary Press and the Oxford Review of Books x Stanford.</p>
+          <p>My training began at Northwestern University Feinberg School of Medicine, where I earned my MD and I completed my psychiatry residency at Stanford.</p>
+          <p>Alongside my clinical practice, I have dedicated much of my career to the intersection of medicine and the literary arts. I am the director of the Pegasus Physician Writers, a creative writing and publication program within Stanford's Medical Humanities and the Arts and founded The Pegasus Review. I am a co-founder and literary agent at Hesperides Literary, and bring years of editorial and advisory experience to writers navigating the path toward publication.</p>
+        </div>
+        <div class="mt-8 p-5 rounded-2xl gsap-fade" style="background:rgba(44,74,46,.06);border:1px solid rgba(44,74,46,.1)">
+          <p class="font-mono text-ink/40 text-[10px] tracking-widest uppercase mb-2">Languages</p>
+          <p class="text-sm text-ink/60"><span class="font-medium text-ink/80">Fluent:</span> English &nbsp;·&nbsp; <span class="font-medium text-ink/80">Conversational:</span> Mandarin</p>
+        </div>
+      </div>
+
+      <!-- Right: CV Accordion -->
+      <div class="space-y-4 gsap-fade">
+
+        <details class="cv-section rounded-2xl overflow-hidden" style="border:1px solid rgba(44,74,46,.12)">
+          <summary class="flex items-center justify-between px-6 py-5 font-display font-semibold text-ink hover:bg-forest/5 transition-colors cursor-pointer">
+            <span>Education</span>
+            <span class="font-mono text-ink/30 text-xs plus">+</span>
+          </summary>
+          <div class="px-6 pb-6 space-y-4 text-sm">
+            <div class="border-l-2 border-gold pl-4">
+              <p class="font-semibold text-ink">Psychiatry Residency</p>
+              <p class="text-ink/55">Stanford University · 2001–2005</p>
+            </div>
+            <div class="border-l-2 border-forest pl-4">
+              <p class="font-semibold text-ink">Doctor of Medicine (MD)</p>
+              <p class="text-ink/55">Northwestern University Feinberg School of Medicine · 2001</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="cv-section rounded-2xl overflow-hidden" style="border:1px solid rgba(44,74,46,.12)">
+          <summary class="flex items-center justify-between px-6 py-5 font-display font-semibold text-ink hover:bg-forest/5 transition-colors cursor-pointer">
+            <span>Academic Roles &amp; Affiliations</span>
+            <span class="font-mono text-ink/30 text-xs plus">+</span>
+          </summary>
+          <div class="px-6 pb-6 space-y-3 text-sm text-ink/65">
+            <p>→ Clinical Associate Professor, Dept. of Psychiatry &amp; Behavioral Sciences — Stanford University</p>
+            <p>→ Director, Pegasus Physician Writers — Stanford Medical Humanities &amp; the Arts</p>
+            <p>→ Founder, The Pegasus Review</p>
+            <p>→ Founding Faculty Editor, Oxford Review of Books × Stanford</p>
+            <p>→ Literary Agent, Hesperides Literary</p>
+            <p>→ WellConnect Physician Well-Being Program — Stanford</p>
+            <p>→ Regional Advisory Committee — California State Council on Developmental Disabilities</p>
+          </div>
+        </details>
+
+        <details class="cv-section rounded-2xl overflow-hidden" style="border:1px solid rgba(44,74,46,.12)">
+          <summary class="flex items-center justify-between px-6 py-5 font-display font-semibold text-ink hover:bg-forest/5 transition-colors cursor-pointer">
+            <span>Honors &amp; Awards</span>
+            <span class="font-mono text-ink/30 text-xs plus">+</span>
+          </summary>
+          <div class="px-6 pb-6 space-y-3 text-sm text-ink/65">
+            <p>→ George C. Gulevich Award for Humanistic Values — Stanford Dept. of Psychiatry &amp; Behavioral Sciences (2005)</p>
+            <p>→ Alpha Omega Alpha Medical Honor Society — Northwestern University (2001)</p>
+            <p>→ Board Certified, American Board of Psychiatry &amp; Neurology (2007)</p>
+          </div>
+        </details>
+
+        <!-- Badge -->
+        <div class="flex items-center gap-4 p-5 rounded-2xl" style="background:#2C4A2E">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(196,148,58,.25)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4943A" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <p class="font-display font-semibold text-parchment text-sm">Diplomate, ABPN</p>
+            <p class="text-parchment/50 text-xs">American Board of Psychiatry &amp; Neurology · Licensed, Medical Board of California</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WORK -->
+<section id="work" class="py-24 px-6 md:px-12 lg:px-20 bg-parchment">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-14">
+      <p class="font-mono text-gold text-xs tracking-[0.25em] uppercase mb-3 gsap-fade">What I Do</p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-ink gsap-fade">Three intersecting<br>vocations.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="card-hover p-8 gsap-fade" style="background:#F2EDE4;border:1px solid rgba(44,74,46,.13);box-shadow:0 4px 32px rgba(44,74,46,.07)">
+        <p class="font-mono text-gold text-[10px] tracking-[0.22em] uppercase mb-5">01 — Stanford</p>
+        <h3 class="font-display font-bold text-xl text-ink mb-3">Pegasus Physician Writers</h3>
+        <p class="text-sm text-ink/60 leading-relaxed mb-6">A creative writing and publication program within Stanford's Medical Humanities and the Arts — fostering emerging voices from student to emeritus faculty. Monthly workshops, editorial support, and a community built around the journey to publication.</p>
+        <a href="http://www.pegasusphysicians.org/" target="_blank" class="font-mono text-gold text-xs hover:translate-x-1 transition-transform inline-block">Visit Pegasus →</a>
+      </div>
+
+      <div class="card-hover p-8 gsap-fade" style="background:#2C4A2E;border:1px solid rgba(44,74,46,.0);box-shadow:0 4px 32px rgba(44,74,46,.15)">
+        <p class="font-mono text-gold text-[10px] tracking-[0.22em] uppercase mb-5">02 — Literary Agency</p>
+        <h3 class="font-display font-bold text-xl text-parchment mb-3">Hesperides Literary</h3>
+        <p class="text-sm text-parchment/60 leading-relaxed mb-6">Co-founded with Connor Smith, Hesperides Literary represents writers working at the crossroads of medicine, narrative nonfiction, literary fiction, and the human experience. Jennifer brings deep editorial expertise and publishing relationships to every client.</p>
+        <a href="https://www.hesperidesliteraryagency.com" target="_blank" class="font-mono text-gold text-xs hover:translate-x-1 transition-transform inline-block">Visit Hesperides →</a>
+      </div>
+
+      <div class="card-hover p-8 gsap-fade" style="background:#F2EDE4;border:1px solid rgba(44,74,46,.13);box-shadow:0 4px 32px rgba(44,74,46,.07)">
+        <p class="font-mono text-gold text-[10px] tracking-[0.22em] uppercase mb-5">03 — Publication</p>
+        <h3 class="font-display font-bold text-xl text-ink mb-3">The Pegasus Review</h3>
+        <p class="text-sm text-ink/60 leading-relaxed mb-3">Co-founded by Dr. Pien to showcase the creative and literary work of physician-writers. The Review amplifies voices that bridge clinical experience with artistic expression, and serves as a founding collaboration with the Oxford Review of Books.</p>
+        <a href="https://www.pegasusreview.com" target="_blank" class="font-mono text-gold text-xs hover:translate-x-1 transition-transform inline-block">Visit The Pegasus Review →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WRITING SECTION -->
+<section id="writing" class="py-24 px-6 md:px-12 lg:px-20" style="background:#2C4A2E">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-14 text-center">
+      <p class="font-mono text-gold text-xs tracking-[0.25em] uppercase mb-3 gsap-fade">For Writers</p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-parchment gsap-fade">Are you a physician<br>with a story to tell?</h2>
+      <p class="text-parchment/55 text-base mt-4 max-w-lg mx-auto gsap-fade">Whether you're a medical student writing your first essay or an attending physician with a manuscript, there is a place for your voice.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-5">
+
+      <div class="card-hover p-8 rounded-[1.75rem] gsap-fade" style="background:rgba(242,237,228,.07);border:1px solid rgba(242,237,228,.12)">
+        <p class="font-mono text-gold text-[10px] tracking-widest uppercase mb-4">Pegasus Workshops</p>
+        <h3 class="font-display font-bold text-xl text-parchment mb-3">Join the Community</h3>
+        <p class="text-parchment/50 text-sm leading-relaxed mb-6">Monthly workshops and editorial support for physician-writers at Stanford. Open to students, residents, fellows, and faculty.</p>
+        <a href="http://www.pegasusphysicians.org/" target="_blank" class="font-mono text-gold text-xs hover:translate-x-1 transition-transform inline-block">Visit pegasusphysicians.org →</a>
+      </div>
+
+      <div class="card-hover p-8 rounded-[1.75rem] gsap-fade" style="background:rgba(242,237,228,.07);border:1px solid rgba(242,237,228,.12)">
+        <p class="font-mono text-gold text-[10px] tracking-widest uppercase mb-4">Hesperides Literary</p>
+        <h3 class="font-display font-bold text-xl text-parchment mb-3">Literary Representation</h3>
+        <p class="text-parchment/50 text-sm leading-relaxed mb-6">Seeking compelling narratives at the intersection of medicine, science, and the human experience. Query with pages and synopsis.</p>
+        <a href="https://www.hesperidesliteraryagency.com" target="_blank" class="font-mono text-gold text-xs hover:translate-x-1 transition-transform inline-block">Visit hesperidesliteraryagency.com →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="pt-20 pb-12 px-6 md:px-12 lg:px-20" style="background:#1C1C1C;border-radius:3rem 3rem 0 0">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-12 mb-16 pb-12" style="border-bottom:1px solid rgba(242,237,228,.08)">
+      <div class="md:col-span-2">
+        <p class="font-display font-bold text-parchment text-xl tracking-wide mb-3">Jennifer Pien, MD</p>
+        <p class="font-drama italic text-parchment/40 text-lg mb-6">Psychiatry. Storytelling. Community.</p>
+        <p class="text-parchment/40 text-sm leading-relaxed max-w-sm">Clinical Associate Professor of Psychiatry at Stanford University. Director of the Pegasus Physician Writers. Literary Agent at Hesperides Literary.</p>
+      </div>
+      <div>
+        <p class="font-mono text-parchment/30 text-[10px] tracking-widest uppercase mb-5">Navigation</p>
+        <div class="space-y-3">
+          <a href="#" class="block text-parchment/55 text-sm hover:text-parchment hover:-translate-y-px transition-all">Home</a>
+          <a href="#about" class="block text-parchment/55 text-sm hover:text-parchment hover:-translate-y-px transition-all">About</a>
+          <a href="#work" class="block text-parchment/55 text-sm hover:text-parchment hover:-translate-y-px transition-all">Work</a>
+          <a href="#writing" class="block text-parchment/55 text-sm hover:text-parchment hover:-translate-y-px transition-all">For Writers</a>
+        </div>
+      </div>
+      <div>
+        <p class="font-mono text-parchment/30 text-[10px] tracking-widest uppercase mb-5">Contact</p>
+        <div class="space-y-3 text-sm text-parchment/55">
+          <p>Stanford University<br>Department of Psychiatry<br>Stanford, CA 94305</p>
+          <p><a href="mailto:info@hesperidesliterary.com" class="hover:text-gold transition-colors">info@hesperidesliterary.com</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <p class="font-mono text-parchment/25 text-[10px] tracking-wider">© 2026 Jennifer Pien, MD · All Rights Reserved</p>
+      <p class="font-mono text-parchment/25 text-[10px] tracking-wider">Stanford University · Hesperides Literary · Pegasus Physician Writers</p>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero entrance
+const tl = gsap.timeline({delay:0.3});
+tl.to('#h-tag',{opacity:1,y:0,duration:0.7,ease:'power3.out'})
+  .to('#h-l1',{opacity:1,y:0,duration:0.7,ease:'power3.out'},'-=0.4')
+  .to('#h-l2',{opacity:1,y:0,duration:0.9,ease:'power3.out'},'-=0.5')
+  .to('#h-sub',{opacity:1,y:0,duration:0.7,ease:'power3.out'},'-=0.5')
+  .to('#h-cta',{opacity:1,y:0,duration:0.6,ease:'power3.out'},'-=0.4');
+
+// Navbar morph
+const hero = document.getElementById('hero');
+const nav = document.getElementById('nav');
+const io = new IntersectionObserver(([e])=>{
+  nav.classList.toggle('s',!e.isIntersecting);
+},{threshold:0.05});
+io.observe(hero);
+
+// Scroll reveals
+gsap.utils.toArray('.gsap-fade').forEach(el=>{
+  gsap.to(el,{
+    opacity:1,y:0,duration:0.75,ease:'power3.out',
+    scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}
+  });
+});
+</script>
+</body>
+</html>
